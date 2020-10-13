@@ -1,0 +1,30 @@
+.wrapper{
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.left a{
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    width: 0px;
+}
+.left a span{
+    vertical-align: center;
+    background-color: black;
+    color: white;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 4px;
+    margin-left: 8px;
+}
+
+
+.right span{
+    margin: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}

@@ -1,0 +1,59 @@
+.box{
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+}
+.box img{
+    height: 200px;
+    width: 200px;
+    cursor: default;
+}
+.img_text{
+    display: none;
+    cursor: default;
+    outline: none;
+    border: 1px solid silver;
+}
+.name{
+    font-weight: 600;
+    cursor: default;
+    outline: none;
+    border: 1px solid silver;
+
+}
+.price{
+    cursor: default;
+    color: silver;
+    padding: 5px 0;
+    outline: none;
+    border: 1px solid silver;
+}
+.button_edit{
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.button_edit:active{
+    color: white;
+}
+.button_delete{
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    display: none;
+}
+.button_delete:active{
+    color: white;
+}
+.text{
+    cursor: default;
+    height: auto; 
+    overflow:hidden;
+    resize: none;
+    background-color: white;
+    outline: none;
+    border: 1px solid silver;
+}

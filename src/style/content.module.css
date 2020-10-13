@@ -1,0 +1,23 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+}
+.title{
+    width: 85%;
+    border-bottom: 1px solid black;
+    padding: 10px 0;
+
+}
+.title{
+    font-weight: 600;
+}
+.flex{
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
