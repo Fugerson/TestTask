@@ -1,0 +1,46 @@
+
+.box{
+    position: fixed;
+    left: calc(50% - 100px);
+    top: calc(50% - 150px);
+    border-radius: 20px;
+    margin: 0px auto;
+    width: 200px;
+    height: 300px;
+    background-color: silver;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.box span{
+    padding: 10px 0;
+    font-weight: 600;
+}
+
+.box input{
+    margin: 7px 0;
+    padding: 7px;
+    outline: none;
+    border: 1px solid silver;
+}
+
+/* button */
+.box_button{
+    width: 70%;
+    display: flex;
+}
+.box_button button{
+    outline: none;
+    color: wheat;
+    
+    background-color: black;
+}
+.box_button :first-child{
+    width: 60%;
+    height: 30px;
+}
+.box_button :last-child{
+    width: 40%;
+    height: 30px;
+}

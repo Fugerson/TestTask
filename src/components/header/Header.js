@@ -5,21 +5,29 @@ import style from '../../style/header.module.css';
 
 
 
-// addHotdog(){
-//     console.log("add")
-// }
+export default function Header(props){
 
-export default function Header(){
+
+
+    let addItem = () =>{
+        if(!props.store.statePopup){
+            props.store.setPapap(true)
+        } else{
+            props.store.setPapap(false)
+        } 
+
+    }
+
     return(
         <div className = {style.wrapper}>
             <div className={style.left}>
                 <a href="#">
-                    <img src="/img/Picture1.png" />
+                    <img alt="IMG" src="/img/Picture1.png" />
                     <span>CRUD</span>
                 </a>
             </div>
             <div className={style.right}>
-                <span onClick={() => { console.log('add')}}>add hot-dog</span>
+                <span onClick={addItem}>add hot-dog</span>
             </div>
         </div>
     )

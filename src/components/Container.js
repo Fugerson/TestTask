@@ -1,13 +1,20 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Content from './content/Content';
-
+import Content from './content/Content'
+import Header from './header/Header';
 import {setImg, setName, setPrice, setText} from './../store/item/action'
+import {setPapap} from './../store/Showpopup/action'
 
  function doWrapper (store){
 
+
+
+
      return(
-         <Content props={store} ></Content>
+        <div className="containerWrapper" >
+        <Header store={store} />
+        <Content props={store} ></Content>
+        </div>
      )
  }
 
@@ -17,13 +24,15 @@ import {setImg, setName, setPrice, setText} from './../store/item/action'
          name: state.item.name,
          price: state.item.price,
          text: state.item.text,
+         statePopup: state.popup.statePopup,
         }
  }
  const mapDispatchToProps = {
     setImg: setImg,
     setName: setName,
     setPrice: setPrice,
-    setText: setText
+    setText: setText,
+    setPapap: setPapap
  };
 
 

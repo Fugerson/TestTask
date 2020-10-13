@@ -4,7 +4,6 @@ import style from '../../../style/item.module.css';
 
 function Item({store}){
 
-    console.log(store.img)
 
     let inputImg = React.createRef(),
         inputPhoto = React.createRef(),
@@ -16,7 +15,6 @@ function Item({store}){
 
     let imgChange = (event) =>{
         event.persist()
-        console.log(event.target.value)
 
         store.setImg(event.target.value)
     }
