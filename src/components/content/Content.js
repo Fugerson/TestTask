@@ -9,7 +9,7 @@ import FormPopap from './../Form-popap/Form-popap';
 
 export default function Content({props}){
 
-
+    // console.log(props.getState().form)
 
     return(
         <div className = {style.wrapper}>
@@ -21,7 +21,7 @@ export default function Content({props}){
                 <Item store={props}></Item>
 
                 {props.statePopup === true &&
-                    <FormPopap />}
+                    <FormPopap props={props} />}
 
                 {/*
                  {props.map((item, i) =>{

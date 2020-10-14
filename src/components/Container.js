@@ -7,13 +7,13 @@ import {setPapap} from './../store/Showpopup/action'
 
  function doWrapper (store){
 
-
+console.log(store)
 
 
      return(
         <div className="containerWrapper" >
-        <Header store={store} />
-        <Content props={store} ></Content>
+            <Header store={store} />
+            <Content props={store} ></Content>
         </div>
      )
  }
