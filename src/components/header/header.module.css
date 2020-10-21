@@ -10,7 +10,7 @@
     margin: 20px;
     display: flex;
     align-items: center;
-    width: 0px;
+    text-decoration: none;
 }
 .left a span{
     vertical-align: center;

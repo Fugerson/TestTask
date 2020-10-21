@@ -1,5 +1,5 @@
 import React from 'react'
-import style from '../../../style/item.module.css';
+import style from './item.module.css';
 
 
 function Item({store}){

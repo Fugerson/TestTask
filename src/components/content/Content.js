@@ -1,6 +1,6 @@
 import React from 'react'
 import Item from './content-item/Item';
-import style from '../../style/content.module.css';
+import style from './content.module.css';
 import FormPopap from './../Form-popap/Form-popap';
 
 

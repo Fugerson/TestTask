@@ -1,66 +1,51 @@
 import React from 'react'
 import { Field, reduxForm } from 'redux-form';
-import style from '../../style//Form-popap.module.css';
-// import { createStore } from 'redux';
-// import {Field, reduxForm} from "redux-form"
-// import {required} from '../../utils/validators/validators'
-// import { combineReducers } from 'redux';
-// import {reducer} from 'redux-form' 
+import style from './Form-popap.module.css';
+import {required, checkNameItem} from './../../utils/validators/validators'
+import { Input } from './../../utils/FormsControl/FormsControl'
 
-
-
-// import rootReducer from './../../store/redusers'
-
-
-// const store = createStore(rootReducer)
 
 
 export default function FormPopap({props}){
-    // console.log(store.getState().form)
+    console.log(props)
+    const validName = checkNameItem(props)
+    // let priceChange = (e) => {
 
-    let priceChange = (e) => {
-
-    }
+    // }
     let closePopup = (e) => {
         e.preventDefault()
         props.setPapap(false)
     }
-    let addItem = (e) => {
-        e.preventDefault()
+    // let addItem = (e) => {
+    //     e.preventDefault()
 
-    }
-    const NameForm = (props) =>{
+    // }
+    const NameForm = (atr) =>{
+        console.log(atr)
         return(
-                <Field name={"name"} component={"input"} placeholder="Name"/>
+
             // <Field placeholder="Name" onChange={priceChange}><Field/>
+        <form onSubmit={props.handleSubmit } className = {style.box}>
+            <span>Add new hot-dog</span>
+            <Field name={"name"} component={Input} validate={[required, validName]} placeholder={"Name"}/>
+            <Field name={"title"} component={"input"} placeholder="Title" /> 
+            <Field name={"description"} component={"input"} placeholder="Description" /> 
+            <Field name={"image"} component={"input"} placeholder="Image" /> 
+            <div className = {style.box_button}>
+                <button onClick={closePopup}>No Thanks</button>
+                <button >Add</button>
+            
+            </div>
+        </form>
     )}
 
+    let submit = (e) =>{
+        console.log(e)
+    }
 
-    const NameReduxForm = reduxForm({form: 'name'})(NameForm)
+    const ReduxForm = reduxForm({form: 'CreacteItem'})(NameForm)
 
     return(
-            <form className = {style.box}>
-                <span>Add new hot-dog</span>
-                <NameReduxForm />
-                <input 
-                    placeholder="Title"
-                    // value={}
-                    onChange={priceChange} /> 
-
-                <input 
-                    placeholder="Description"
-                    // value={}
-                    onChange={priceChange} /> 
-
-                <input 
-                    placeholder="Image"
-                    // value={}
-                    onChange={priceChange} /> 
-
-                    <div className = {style.box_button}>
-                        <button onClick={closePopup}>No Thanks</button>
-                        <button onClick={addItem}>Add</button>
-                    </div>
-            </form>
+        <ReduxForm onSubmit={submit}></ReduxForm>
     )
 }

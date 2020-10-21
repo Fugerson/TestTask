@@ -6,13 +6,13 @@ import { ITEM_CHANGE_TEXT } from "./action"
 let DEFSTATE = {
     items: [
         {
-            img: "https://img.icons8.com/cotton/64/000000/frankfurter.png",
+            img: "./img/jay.jpg",
             name: 'champion',
             price: "1$",
             text: "lorem lorem lorem"
         },
         {
-            img: "https://img.icons8.com/ios-glyphs/64/000000/frankfurter.png",
+            img: "./img/jay.jpg",
             name: 'champion1111',
             price: "2$",
             text: "lorem lorem lorem"

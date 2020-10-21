@@ -7,7 +7,7 @@ import {setPapap} from './../store/Showpopup/action'
 
  function doWrapper (store){
 
-console.log(store)
+// console.log(store)
 
 
      return(
